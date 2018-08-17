@@ -1,0 +1,8 @@
+version: "2"
+services:
+    ftp_download:
+        image: localhost:5000/ftp_download:${FTP_DOWNLOAD_TAG}
+        ports:
+            - 8000:8000
+        environment:
+            DATABASE_URL: ${DATABASE_URL}
