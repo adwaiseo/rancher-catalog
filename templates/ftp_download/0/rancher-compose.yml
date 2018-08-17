@@ -1,6 +1,6 @@
 version: "2"
 catalog:
-    name: ftp_download
+    name: ftpdownload
     version: v0.0.1
     description: no description
     questions:
@@ -27,5 +27,5 @@ catalog:
             - 0.2.1
 
 services:
-    ftp_download:
+    ftpdownload:
         scale: 1

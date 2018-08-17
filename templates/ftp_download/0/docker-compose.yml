@@ -1,6 +1,6 @@
 version: "2"
 services:
-    ftp_download:
+    ftpdownload:
         image: localhost:5000/ftp_download:${FTP_DOWNLOAD_TAG}
         ports:
             - ${port}
