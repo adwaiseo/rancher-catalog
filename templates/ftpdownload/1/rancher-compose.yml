@@ -1,0 +1,32 @@
+version: "2"
+catalog:
+    name: ftpdownload
+    version: v0.0.2
+    description: no description
+    upgrade_from: v0.0.1
+    questions:
+        - variable: port
+          description: Port to access the ftp_download web service
+          label: Port
+          required: true
+          default: 8000
+          type: int
+        - variable: DATABASE_URL
+          description: PostgreSQL connection string
+          label: PostgreSQL connection string
+          required: true
+          type: string
+        - variable: FTP_DOWNLOAD_TAG
+          description: The image tag we want to deploy
+          label: Image tag
+          required: true
+          default: latest
+          type: enum
+          options:
+            - latest
+            - stable
+            - 0.2.1
+
+services:
+    ftpdownload:
+        scale: 1
